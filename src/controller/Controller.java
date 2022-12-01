@@ -53,4 +53,9 @@ public class Controller implements ActionListener {
             ventana.getPanelPrincipal().setVisible(true);
         }
     }
+
+    public void prueba() {
+        //a ver si sirve
+    }
+
 }
