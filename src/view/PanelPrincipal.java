@@ -3,6 +3,9 @@ package view;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * The type Panel principal.
+ */
 public class PanelPrincipal extends JPanel {
 
     private JLabel lblTitulo;
@@ -12,12 +15,18 @@ public class PanelPrincipal extends JPanel {
     private JButton btnCreditos;
     private JButton btnSalir;
 
+    /**
+     * Instantiates a new Panel principal.
+     */
     public PanelPrincipal() {
         setLayout(null);
         setVisible(true);
         iniciarComponentes();
     }
 
+    /**
+     * Iniciar componentes.
+     */
     public void iniciarComponentes() {
         setBackground(new Color(46, 211, 179));
         Font font = new Font("Century Gothic", Font.BOLD, 14);
@@ -58,50 +67,110 @@ public class PanelPrincipal extends JPanel {
         btnSalir.setActionCommand("SALIR");
     }
 
+    /**
+     * Gets lbl titulo.
+     *
+     * @return the lbl titulo
+     */
     public JLabel getLblTitulo() {
         return lblTitulo;
     }
 
+    /**
+     * Sets lbl titulo.
+     *
+     * @param lblTitulo the lbl titulo
+     */
     public void setLblTitulo(JLabel lblTitulo) {
         this.lblTitulo = lblTitulo;
     }
 
+    /**
+     * Gets btn nutricion.
+     *
+     * @return the btn nutricion
+     */
     public JButton getBtnNutricion() {
         return btnNutricion;
     }
 
+    /**
+     * Sets btn nutricion.
+     *
+     * @param btnNutricion the btn nutricion
+     */
     public void setBtnNutricion(JButton btnNutricion) {
         this.btnNutricion = btnNutricion;
     }
 
+    /**
+     * Gets btn backtracking.
+     *
+     * @return the btn backtracking
+     */
     public JButton getBtnBacktracking() {
         return btnBacktracking;
     }
 
+    /**
+     * Sets btn backtracking.
+     *
+     * @param btnBacktracking the btn backtracking
+     */
     public void setBtnBacktracking(JButton btnBacktracking) {
         this.btnBacktracking = btnBacktracking;
     }
 
+    /**
+     * Gets btn rama.
+     *
+     * @return the btn rama
+     */
     public JButton getBtnRama() {
         return btnRama;
     }
 
+    /**
+     * Sets btn rama.
+     *
+     * @param btnRama the btn rama
+     */
     public void setBtnRama(JButton btnRama) {
         this.btnRama = btnRama;
     }
 
+    /**
+     * Gets btn creditos.
+     *
+     * @return the btn creditos
+     */
     public JButton getBtnCreditos() {
         return btnCreditos;
     }
 
+    /**
+     * Sets btn creditos.
+     *
+     * @param btnCreditos the btn creditos
+     */
     public void setBtnCreditos(JButton btnCreditos) {
         this.btnCreditos = btnCreditos;
     }
 
+    /**
+     * Gets btn salir.
+     *
+     * @return the btn salir
+     */
     public JButton getBtnSalir() {
         return btnSalir;
     }
 
+    /**
+     * Sets btn salir.
+     *
+     * @param btnSalir the btn salir
+     */
     public void setBtnSalir(JButton btnSalir) {
         this.btnSalir = btnSalir;
     }

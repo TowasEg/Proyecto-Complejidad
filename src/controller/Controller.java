@@ -1,5 +1,7 @@
 package controller;
 
+import model.Nutricionista;
+import view.PanelNutricionista;
 import view.VentanaPrincipal;
 import view.View;
 
@@ -9,10 +11,15 @@ import java.awt.event.ActionListener;
 public class Controller implements ActionListener {
 
     private VentanaPrincipal ventana;
+    private Nutricionista nutricionista;
     private View view;
 
+    /**
+     * Instantiates a new Controller.
+     */
     public Controller() {
         ventana = new VentanaPrincipal();
+        nutricionista = new Nutricionista();
         view = new View();
         ventana.getPanelPrincipal().setVisible(true);
         asignarOyentes();
@@ -22,9 +29,9 @@ public class Controller implements ActionListener {
         ventana.getPanelPrincipal().getBtnNutricion().addActionListener(this);
         ventana.getPanelPrincipal().getBtnCreditos().addActionListener(this);
         ventana.getPanelPrincipal().getBtnSalir().addActionListener(this);
-
         ventana.getPanelNutricionista().getBtnInfo().addActionListener(this);
         ventana.getPanelNutricionista().getBtnVolver().addActionListener(this);
+        ventana.getPanelNutricionista().getBtnGenerarTxt().addActionListener(this);
     }
 
     @Override
@@ -51,6 +58,9 @@ public class Controller implements ActionListener {
         if (comando.equals("VOLVERNUTRICIONISTA")) {
             ventana.getPanelNutricionista().setVisible(false);
             ventana.getPanelPrincipal().setVisible(true);
+        }
+        if (comando.equals("NUTRICIONISTA")){
+            nutricionista.Resolver(view.listaCalorias(), view.caloriasConsumir());
         }
     }
 }

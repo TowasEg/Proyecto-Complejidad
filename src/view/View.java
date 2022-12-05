@@ -4,13 +4,59 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.Scanner;
 
+/**
+ * The type View.
+ */
 public class View extends Component {
 
     private Scanner leer = new Scanner(System.in);
 
+
+    /**
+     * Instantiates a new View.
+     */
     public View() {
     }
 
+    /**
+     * Lista calorias int [ ].
+     *
+     * @return the int [ ]
+     */
+    public int[] listaCalorias() {
+        int[] platos = new int[0];
+        try {
+            int numPlatos = Integer.parseInt(JOptionPane.showInputDialog("**INGRESE LA CANTIDAD DE PLATOS DEL MENÚ**"));
+            platos = new int[numPlatos];
+            for (int i = 0; i < numPlatos; i++) {
+                platos[i] = Integer.parseInt(String.valueOf(JOptionPane.showInputDialog("INGRESE LAS CALORIAS DEL PLATO #" + (i + 1) + ": ").charAt(0)));
+            }
+
+        } catch (NumberFormatException exception) {
+            JOptionPane.showMessageDialog(null, "**DEBE INGRESAR UN VALOR NÚMERICO.**");
+        }
+        return platos;
+    }
+
+    /**
+     * Calorias consumir int.
+     *
+     * @return the int
+     */
+    public int caloriasConsumir() {
+        int calorias = 0;
+        try {
+            calorias = Integer.parseInt(JOptionPane.showInputDialog("INGRESE EL NÚMERO DE CALORÍAS QUE VA A CONSUMIR: "));
+
+        } catch (NumberFormatException exception) {
+            JOptionPane.showMessageDialog(null, "**DEBE INGRESAR UN VALOR NÚMERICO.**");
+        }
+        return calorias;
+    }
+
+    /**
+     * Info nutricionista.
+     */
     public void infoNutricionista() {
         JOptionPane.showMessageDialog(this, "Un nutricionista va a un restaurante. En la carta aparecen\n" +
                         "todos los platos disponibles con el número de calorías.\n" +
@@ -22,6 +68,9 @@ public class View extends Component {
                 "Información Problema Nutricionista", JOptionPane.INFORMATION_MESSAGE);
     }
 
+    /**
+     * Creditos.
+     */
     public void creditos() {
         JOptionPane.showMessageDialog(this, "Programa creado por:\n" +
                         "Karen Ximena Rojas Calderon\nJose Miguel Salcedo Mercado\n" +
@@ -30,6 +79,9 @@ public class View extends Component {
                 "Créditos", JOptionPane.INFORMATION_MESSAGE);
     }
 
+    /**
+     * Despedida.
+     */
     public void despedida() {
         JOptionPane.showMessageDialog(this, "Gracias por utilizar el programa\nVuelva pronto :)",
                 "Adiós", JOptionPane.INFORMATION_MESSAGE);
