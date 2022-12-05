@@ -63,4 +63,9 @@ public class Controller implements ActionListener {
             nutricionista.Resolver(view.listaCalorias(), view.caloriasConsumir());
         }
     }
+
+    public void prueba() {
+        //a ver si sirve
+    }
+
 }
