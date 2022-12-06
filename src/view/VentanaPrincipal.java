@@ -10,6 +10,7 @@ public class VentanaPrincipal extends JFrame {
 
     private PanelPrincipal panelPrincipal;
     private PanelNutricionista panelNutricionista;
+    private PanelLiebre panelLiebre;
 
     /**
      * Instantiates a new Ventana principal.
@@ -39,6 +40,10 @@ public class VentanaPrincipal extends JFrame {
         panelNutricionista = new PanelNutricionista();
         panelNutricionista.setBounds(25, 25, 635, 510);
         getContentPane().add(panelNutricionista);
+
+        panelLiebre = new PanelLiebre();
+        panelLiebre.setBounds(25, 25, 635, 510);
+        getContentPane().add(panelLiebre);
     }
 
     /**
@@ -75,5 +80,23 @@ public class VentanaPrincipal extends JFrame {
      */
     public void setPanelNutricionista(PanelNutricionista panelNutricionista) {
         this.panelNutricionista = panelNutricionista;
+    }
+
+    /**
+     * Gets panel liebre.
+     *
+     * @return the panel liebre
+     */
+    public PanelLiebre getPanelLiebre() {
+        return panelLiebre;
+    }
+
+    /**
+     * Sets panel liebre.
+     *
+     * @param panelLiebre the panel liebre
+     */
+    public void setPanelLiebre(PanelLiebre panelLiebre) {
+        this.panelLiebre = panelLiebre;
     }
 }

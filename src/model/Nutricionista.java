@@ -99,8 +99,6 @@ public class Nutricionista {
      */
     public static void Resolver(int[] lista, int C) {
         int[][] tabla = Calcular(lista, lista.length, C);
-
-
         for (int i = 0; i < tabla.length; ++i) {
             for (int j = 0; j < tabla[0].length; ++j) {
                 System.out.print("[" + tabla[i][j] + "]");
@@ -108,7 +106,6 @@ public class Nutricionista {
             System.out.println();
         }
         Object[] r = Resultado(tabla, lista, lista.length, C);
-
 
         for (int i : lista) {
             System.out.print("[" + i + "]");

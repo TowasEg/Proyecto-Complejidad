@@ -28,6 +28,7 @@ public class View extends Component {
         try {
             int numPlatos = Integer.parseInt(JOptionPane.showInputDialog("**INGRESE LA CANTIDAD DE PLATOS DEL MENÚ**"));
             platos = new int[numPlatos];
+
             for (int i = 0; i < numPlatos; i++) {
                 platos[i] = Integer.parseInt(String.valueOf(JOptionPane.showInputDialog("INGRESE LAS CALORIAS DEL PLATO #" + (i + 1) + ": ").charAt(0)));
             }
@@ -85,6 +86,28 @@ public class View extends Component {
     public void despedida() {
         JOptionPane.showMessageDialog(this, "Gracias por utilizar el programa\nVuelva pronto :)",
                 "Adiós", JOptionPane.INFORMATION_MESSAGE);
+    }
+
+    /**
+     * Pedir dato int.
+     *
+     * @param mensaje the mensaje
+     * @return the int
+     */
+    public  int pedirDato(String mensaje) {
+
+        int respuesta = 0;
+
+        try {
+            String instruccion=JOptionPane.showInputDialog(mensaje);
+            respuesta=Integer.parseInt(instruccion);
+
+        }catch(Exception e) {
+            JOptionPane.showMessageDialog(null, "**DEBE INGRESAR UN VALOR NÚMERICO.**");
+            respuesta = pedirDato(mensaje);
+
+        }
+        return respuesta;
     }
 
 }
